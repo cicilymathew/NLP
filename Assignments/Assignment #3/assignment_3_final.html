@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>assignment_3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>assignment_3_final</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -10637,6 +10637,72 @@ Word Clouds: Word clouds were generated for each topic to visualize the most imp
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Comparison between LDA and BERTopic:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"1. Number of topics detected:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"   - LDA: 20 topics"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"   - BERTopic: 23 topics"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">2. Document distribution across topics:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - LDA: Distributed across all topics"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - BERTopic: Some documents classified as outliers"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">3. Topic interpretability:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - LDA: Topics can be more difficult to interpret due to bag-of-words approach"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - BERTopic: Topics often more coherent due to contextual embeddings"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">4. Hyperparameter choices:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - LDA: Need to specify number of topics in advance"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - BERTopic: Can automatically determine number of topics"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">5. Semantic understanding:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - LDA: Based on word co-occurrence statistics"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"   - BERTopic: Based on contextual word embeddings from transformer models"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Comparison between LDA and BERTopic:
+1. Number of topics detected:
+   - LDA: 20 topics
+   - BERTopic: 23 topics
+
+2. Document distribution across topics:
+   - LDA: Distributed across all topics
+   - BERTopic: Some documents classified as outliers
+
+3. Topic interpretability:
+   - LDA: Topics can be more difficult to interpret due to bag-of-words approach
+   - BERTopic: Topics often more coherent due to contextual embeddings
+
+4. Hyperparameter choices:
+   - LDA: Need to specify number of topics in advance
+   - BERTopic: Can automatically determine number of topics
+
+5. Semantic understanding:
+   - LDA: Based on word co-occurrence statistics
+   - BERTopic: Based on contextual word embeddings from transformer models
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -10644,11 +10710,25 @@ Word Clouds: Word clouds were generated for each topic to visualize the most imp
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Overall the topic modeling outputs from LDA and BERTopic are different in how they group and represent topics, reflecting the base methodology of each approach.</p>
-<p>With LDA, we can see that the topics are broader and more conceptual topics, as LDA assumes a probabilistic distribution of words across topics and topics across documents.</p>
-<p>In contrast, BERTopic produces more granular and specific topics leveraging embeddings and clustering techniques (especially since we decided to use only the first 9 of 23 topics).
-Also, BERTopic tends to generate less redundant topics, as its clustering approach groups semantically similar documents more effectively. However, some thematic overlap can still occur, as seen with topics like "Seattle News and Politics" vs "Indian Politics and Economy", and "Nasdaq and Financial Updates" vs "Stock Market and Investments" vs "Global Financial Markets".</p>
-<p>Overall, LDA was more high level, while BERTopic was more granular. As such, the choice between the two comes down to the interpretation goal.</p>
+<p>There are several key differences between the LDA and BERTopic models when applied to the news article data:</p>
+<ol>
+<li><p>Topic Detection and Flexibility:
+LDA required us to predefine the number of topics, whereas BERTopic automatically identified 23 topics from the data. This demonstrates BERTopic's adaptability to the  structure of the corpus without requiring manual specification. The higher number of topics discovered by BERTopic suggests it may be capturing more fine-grained thematic distinctions in the news articles.</p>
+</li>
+<li><p>Document Classification Strategy:
+LDA assigned every document to a probability distribution across all topics, meaning each document had some association with each topic. In contrast, BERTopic's clustering-based approach allowed it to classify some documents as outliers that don't fit well into the discovered topic structure. This creates a more selective topic assignment but potentially leaves some documents uncategorized.</p>
+</li>
+<li><p>Topic Coherence and Interpretability:
+BERTopic produced more coherent topics due to its use of contextual embeddings from transformer models. These topics were generally easier to interpret as they captured meaningful relationships between words. LDA's BOW approach resulted in topics that were more challenging to interpret clearly.</p>
+</li>
+<li><p>Semantic Understanding:
+LDA operates on simple word co-occurrence patterns, treating words as independent units without considering their context. BERTopic leverages pre-trained transformer models that capture rich contextual information and semantic relationships between words, allowing it to group thematically related content even when different terminology is used.</p>
+</li>
+<li><p>Practical Implications:
+For news article analysis, BERTopic offers advantages in discovering topics with greater  coherence. However, LDA's simpler approach might be more computationally efficient for larger datasets. The choice between methods depends on wheater interpretability, granularity of topics or computational efficiency is prioritized for a specific application.</p>
+</li>
+</ol>
+<p>BERTopic demonstrated superior performance in terms of topic coherence and semantic understanding, making it particularly valuable for complex text like news articles where contextual understanding is important. However, LDA's simplicity and full document classification may be preferable in certain applications where computational efficiency or complete topic assignment is required.</p>
 </div>
 </div>
 </div>
